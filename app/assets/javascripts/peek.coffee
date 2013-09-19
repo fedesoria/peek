@@ -32,9 +32,11 @@ toggleBar = (event) ->
     wrapper = $('#peek')
     if wrapper.hasClass 'disabled'
       wrapper.removeClass 'disabled'
+      $(".peek-rblineprof-modal").show()
       document.cookie = "peek=true; path=/";
     else
       wrapper.addClass 'disabled'
+      $(".peek-rblineprof-modal").hide()
       document.cookie = "peek=false; path=/";
 
 fetchRequestResults = ->
